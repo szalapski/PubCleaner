@@ -1,0 +1,10 @@
+﻿<Window x:Class="Szalapski.PubCleaner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PubCleaner" Height="350" Width="525">
+    <Grid>
+        <DockPanel>
+            <TextBlock DockPanel.Dock="top">Hello World</TextBlock>
+        </DockPanel>
+    </Grid>
+</Window>
