@@ -16,21 +16,21 @@ namespace Szalapski.PubCleaner.Lib {
         /// </summary>
         public CleanResults Clean() {
             List<FileInfo> periodicals = kindle.GetPeriodicals();
-            List<FileInfo> oldOnes = FilterToOldPeriodicals(periodicals);
+            IEnumerable<FileInfo> oldOnes = FilterToOldPeriodicals(periodicals);
             kindle.Delete(oldOnes);
             var result = new CleanResults(true);
             result.FilesCleaned.AddRange(oldOnes);
             return result;
         }
 
-        private List<FileInfo> FilterToOldPeriodicals(IEnumerable<FileInfo> periodicals) {
+        private IEnumerable<FileInfo> FilterToOldPeriodicals(IEnumerable<FileInfo> periodicals) {
             if (periodicals == null) throw new ArgumentNullException("periodicals");
-            List<FileInfo> results = new List<FileInfo>();
+            List<FileInfo> latestPeriodicals = new List<FileInfo>();
             foreach (var file in periodicals.OrderBy( f => f.CreationTime)) {
                 string frontOfFilename = file.Name.Substring(0, file.Name.LastIndexOf('_')+1);
-                if (!results.Any(f => f.Name.StartsWith(frontOfFilename))) results.Add(file);
+                if (!latestPeriodicals.Any(f => f.Name.StartsWith(frontOfFilename))) latestPeriodicals.Add(file);
             }
-            return results;
+            return periodicals.Except(latestPeriodicals);
         }
     }
  }
