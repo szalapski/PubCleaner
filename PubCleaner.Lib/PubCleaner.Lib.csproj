@@ -41,7 +41,8 @@
   <ItemGroup>
     <Compile Include="Cleaner.cs" />
     <Compile Include="CleanResults.cs" />
-    <Compile Include="IFileStore.cs" />
+    <Compile Include="IPeriodicalStore.cs" />
+    <Compile Include="KindlePeriodicalStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

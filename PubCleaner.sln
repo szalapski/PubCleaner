@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubCleaner.Lib", "PubCleane
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubCleaner.Lib.Tests.Unit", "PubCleaner.Lib.Tests.Unit\PubCleaner.Lib.Tests.Unit.csproj", "{4BFEF3CD-091D-4C7C-8DC3-41276163C70D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubCleaner.Lib.Tests.Integration", "PubCleaner.Lib.Tests.Integration\PubCleaner.Lib.Tests.Integration.csproj", "{8BF0AF77-33DF-47E0-8411-1E25A8E6A0F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4BFEF3CD-091D-4C7C-8DC3-41276163C70D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BFEF3CD-091D-4C7C-8DC3-41276163C70D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BFEF3CD-091D-4C7C-8DC3-41276163C70D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BF0AF77-33DF-47E0-8411-1E25A8E6A0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BF0AF77-33DF-47E0-8411-1E25A8E6A0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BF0AF77-33DF-47E0-8411-1E25A8E6A0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BF0AF77-33DF-47E0-8411-1E25A8E6A0F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

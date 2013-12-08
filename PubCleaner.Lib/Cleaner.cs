@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace Szalapski.PubCleaner.Lib {
     public class Cleaner {
-        private IFileStore kindle;
+        private IPeriodicalStore kindle;
         
-        public Cleaner(IFileStore kindle) {
+        public Cleaner(IPeriodicalStore kindle) {
             this.kindle = kindle;
         }
 
@@ -15,7 +15,7 @@ namespace Szalapski.PubCleaner.Lib {
         /// Cleans all old periodcials/publications from the attached Kindle, leaving only the most recent one
         /// </summary>
         public CleanResults Clean() {
-            List<FileInfo> periodicals = kindle.GetPeriodicals();
+            IEnumerable<FileInfo> periodicals = kindle.GetPeriodicals();
             IEnumerable<FileInfo> oldOnes = FilterToOldPeriodicals(periodicals);
             kindle.Delete(oldOnes);
             var result = new CleanResults(true);

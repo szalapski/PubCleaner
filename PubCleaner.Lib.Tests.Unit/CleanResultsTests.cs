@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Szalapski.PubCleaner.Lib.Tests.Unit {
     [TestClass]
-    public class CleanResultsTests {
+    class CleanResultsTests {
         [TestMethod]
         public void Constructor_True_IsSetProperly() {
             var sut = new CleanResults(success: true);
