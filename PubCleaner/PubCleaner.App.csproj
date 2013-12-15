@@ -50,6 +50,10 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WpfBindTo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dependencies\WpfBindTo.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -95,6 +99,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dependencies\WpfBindTo.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PubCleaner.Lib\PubCleaner.Lib.csproj">
+      <Project>{03638fa4-86b7-4c7e-b2f5-b5bf6604613a}</Project>
+      <Name>PubCleaner.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

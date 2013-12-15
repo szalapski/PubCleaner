@@ -42,6 +42,7 @@
     <Compile Include="Cleaner.cs" />
     <Compile Include="CleanResults.cs" />
     <Compile Include="IPeriodicalStore.cs" />
+    <Compile Include="KindleDetector.cs" />
     <Compile Include="KindlePeriodicalStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
