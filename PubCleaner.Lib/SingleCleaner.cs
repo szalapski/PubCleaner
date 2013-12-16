@@ -4,10 +4,10 @@ using System.IO;
 using System.Linq;
 
 namespace Szalapski.PubCleaner.Lib {
-    public class Cleaner {
+    public class SingleCleaner : ICleaner {
         private IPeriodicalStore kindle;
         
-        public Cleaner(IPeriodicalStore kindle) {
+        public SingleCleaner(IPeriodicalStore kindle) {
             this.kindle = kindle;
         }
 

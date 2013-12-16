@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Szalapski.PubCleaner.Lib {
-    public class KindleDetector {
+    public class KindleDetector : IKindleDetector {
 
-        //TODO: make this an instance class
-        public static IEnumerable<DirectoryInfo> DetectKindleDirectories() {
+        public IEnumerable<DirectoryInfo> DetectKindleDirectories() {
             var files = Directory.GetLogicalDrives();
             string[] driveBlacklist = { @"A:\", @"B:\", @"C:\" };
             IEnumerable<DriveInfo> drives = DriveInfo.GetDrives().Where(d => !driveBlacklist.Contains(d.Name));
@@ -17,7 +13,6 @@ namespace Szalapski.PubCleaner.Lib {
             foreach (DriveInfo kindleDrive in kindleDrives) {
                 yield return new DirectoryInfo(Path.Combine(kindleDrive.Name, "documents"));
             }
-
         }
 
     }

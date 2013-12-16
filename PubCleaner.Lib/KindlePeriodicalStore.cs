@@ -23,7 +23,7 @@ namespace Szalapski.PubCleaner.Lib {
             return root.EnumerateFiles("*.pobi", SearchOption.AllDirectories);
         }
 
-        public void Delete(System.IO.FileInfo periodical) {
+        public void Delete(FileInfo periodical) {
             if (periodical.Extension == ".pobi") {
                 IEnumerable<FileInfo> relatedFiles = periodical.Directory
                     .EnumerateFiles(string.Format("{0}.*", GetNameWithoutExtension(periodical)), SearchOption.AllDirectories)

@@ -13,7 +13,7 @@ namespace Szalapski.PubCleaner.Lib.Tests.Unit {
         [ExpectedException(typeof(ArgumentNullException))]
         public void Clean_RunWithNullFiles_ThrowsException() {
             var mockKindle = new Mock<IPeriodicalStore>();
-            var sut = new Cleaner(mockKindle.Object);
+            var sut = new SingleCleaner(mockKindle.Object);
             var result = sut.Clean();
         }
 
@@ -22,7 +22,7 @@ namespace Szalapski.PubCleaner.Lib.Tests.Unit {
             //arrange
             var mockKindle = new Mock<IPeriodicalStore>();
             mockKindle.Setup(mock => mock.GetPeriodicals()).Returns(new List<FileInfo>());
-            var sut = new Cleaner(mockKindle.Object);
+            var sut = new SingleCleaner(mockKindle.Object);
 
             //act
             var result = sut.Clean();
@@ -45,7 +45,7 @@ namespace Szalapski.PubCleaner.Lib.Tests.Unit {
             var mockKindle = new Mock<IPeriodicalStore>();
             mockKindle.Setup(mock => mock.GetPeriodicals())
                 .Returns(makePobiList("TestPrefix1_Suffix1", "TestPrefix2_Suffix2", "TestPrefixRed_Suffix3", "TestPrefixBlue_Suffix4"));
-            var sut = new Cleaner(mockKindle.Object);
+            var sut = new SingleCleaner(mockKindle.Object);
 
             //act
             var result = sut.Clean();
@@ -61,7 +61,7 @@ namespace Szalapski.PubCleaner.Lib.Tests.Unit {
             var mockKindle = new Mock<IPeriodicalStore>();
             mockKindle.Setup(mock => mock.GetPeriodicals())
                 .Returns(makePobiList("TestPrefix1_Suffix1", "TestPrefix1_Suffix2", "TestPrefixGreen_Suffix3", "TestPrefixGreen_Suffix4", "TestPrefixYes_Suffix5"));
-            var sut = new Cleaner(mockKindle.Object);
+            var sut = new SingleCleaner(mockKindle.Object);
 
             //act
             var result = sut.Clean();
@@ -76,7 +76,7 @@ namespace Szalapski.PubCleaner.Lib.Tests.Unit {
             var mockKindle = new Mock<IPeriodicalStore>();
             mockKindle.Setup(mock => mock.GetPeriodicals())
                 .Returns(makePobiList("TestPrefixGreen_Suffix1", "TestPrefixGreen_Suffix2", "TestPrefixGreen_Suffix3", "TestPrefixGreen_Suffix4", "TestPrefixGreen_Suffix5"));
-            var sut = new Cleaner(mockKindle.Object);
+            var sut = new SingleCleaner(mockKindle.Object);
 
             //act
             var result = sut.Clean();
@@ -91,7 +91,7 @@ namespace Szalapski.PubCleaner.Lib.Tests.Unit {
             var mockKindle = new Mock<IPeriodicalStore>();
             mockKindle.Setup(mock => mock.GetPeriodicals())
                 .Returns(makePobiList(@"a\TestPrefix1_Suffix1", @"b\TestPrefix1_Suffix1", @"c\TestPrefix1_Suffix1", "TestPrefix1_Suffix1", "TestPrefixGreen_Suffix4", "TestPrefixYes_Suffix5"));
-            var sut = new Cleaner(mockKindle.Object);
+            var sut = new SingleCleaner(mockKindle.Object);
 
             //act
             var result = sut.Clean();
@@ -107,7 +107,7 @@ namespace Szalapski.PubCleaner.Lib.Tests.Unit {
             var mockKindle = new Mock<IPeriodicalStore>();
             mockKindle.Setup(mock => mock.GetPeriodicals())
                 .Returns(makePobiList(@"a\TestPrefix1_Suffix1.old", @"b\TestPrefix1_Suffix1.old", @"c\TestPrefix1_Suffix1", "TestPrefix1_Suffix1", "TestPrefixGreen_Suffix4", "TestPrefixYes_Suffix5"));
-            var sut = new Cleaner(mockKindle.Object);
+            var sut = new SingleCleaner(mockKindle.Object);
 
             //act
             var result = sut.Clean();

@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubCleaner.Lib.Tests.Unit",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubCleaner.Lib.Tests.Integration", "PubCleaner.Lib.Tests.Integration\PubCleaner.Lib.Tests.Integration.csproj", "{8BF0AF77-33DF-47E0-8411-1E25A8E6A0F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubCleaner.App.Tests.Unit", "PubCleaner.App.Tests.Unit\PubCleaner.App.Tests.Unit.csproj", "{74697DDC-69A3-4FFE-A8D8-026707B504DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubCleaner.TestsCommon", "PubCleaner.TestsCommon\PubCleaner.TestsCommon.csproj", "{ED6763A5-0C21-43D4-9D26-3512F7271672}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{8BF0AF77-33DF-47E0-8411-1E25A8E6A0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BF0AF77-33DF-47E0-8411-1E25A8E6A0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BF0AF77-33DF-47E0-8411-1E25A8E6A0F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74697DDC-69A3-4FFE-A8D8-026707B504DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74697DDC-69A3-4FFE-A8D8-026707B504DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74697DDC-69A3-4FFE-A8D8-026707B504DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74697DDC-69A3-4FFE-A8D8-026707B504DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED6763A5-0C21-43D4-9D26-3512F7271672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED6763A5-0C21-43D4-9D26-3512F7271672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED6763A5-0C21-43D4-9D26-3512F7271672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED6763A5-0C21-43D4-9D26-3512F7271672}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

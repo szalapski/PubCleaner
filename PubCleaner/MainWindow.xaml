@@ -5,7 +5,7 @@
     <Grid>
         <DockPanel LastChildFill="True">
             <Button x:Name="CleanNowButton" DockPanel.Dock="top" Command="{BindTo CleanNow()}">Clean now</Button>
-            <TextBlock x:Name="ResultsTextBlock">results go here</TextBlock>
+            <TextBlock x:Name="ResultsTextBlock" Text="{BindTo CleanResults}"/>
         </DockPanel>
     </Grid>
 </Window>
