@@ -24,7 +24,8 @@ namespace Szalapski.PubCleaner.App {
             foreach (FileInfo file in results.FilesCleaned) {
                 resultsBuilder.AppendLine(string.Format("Deleted {0}", file.FullName));
             }
-            CleanResults = resultsBuilder.ToString();
+            resultsBuilder.AppendLine(string.Format("{0} periodical{1} deleted", results.FilesCleaned.Count, results.FilesCleaned.Count==1 ? "" : "s"));
+            CleanResults += resultsBuilder.ToString();
         }
         
     }

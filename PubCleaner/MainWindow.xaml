@@ -5,7 +5,9 @@
     <Grid>
         <DockPanel LastChildFill="True">
             <Button x:Name="CleanNowButton" DockPanel.Dock="top" Command="{BindTo CleanNow()}">Clean now</Button>
-            <TextBlock x:Name="ResultsTextBlock" Text="{BindTo CleanResults}"/>
+            <ScrollViewer>
+                <TextBlock x:Name="ResultsTextBlock" Text="{BindTo CleanResults}" />
+            </ScrollViewer>
         </DockPanel>
     </Grid>
 </Window>

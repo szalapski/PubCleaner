@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 
 namespace Szalapski.PubCleaner.App {
-    public abstract class NotifiableBase {
+    public abstract class NotifiableBase : INotifyPropertyChanged{
         public event PropertyChangedEventHandler PropertyChanged;
 
         // This method is called by the Set accessor of each property. 

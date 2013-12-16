@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubCleaner.App.Tests.Unit",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubCleaner.TestsCommon", "PubCleaner.TestsCommon\PubCleaner.TestsCommon.csproj", "{ED6763A5-0C21-43D4-9D26-3512F7271672}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{97B1D22E-A9C5-4C26-8CD8-E4D04FD5AAC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8BF0AF77-33DF-47E0-8411-1E25A8E6A0F4} = {97B1D22E-A9C5-4C26-8CD8-E4D04FD5AAC6}
+		{4BFEF3CD-091D-4C7C-8DC3-41276163C70D} = {97B1D22E-A9C5-4C26-8CD8-E4D04FD5AAC6}
+		{ED6763A5-0C21-43D4-9D26-3512F7271672} = {97B1D22E-A9C5-4C26-8CD8-E4D04FD5AAC6}
+		{74697DDC-69A3-4FFE-A8D8-026707B504DF} = {97B1D22E-A9C5-4C26-8CD8-E4D04FD5AAC6}
 	EndGlobalSection
 EndGlobal
