@@ -8,7 +8,6 @@ namespace Szalapski.PubCleaner.Lib.Tests.Unit {
     [TestClass]
     class CleanerTests {
 
-
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void Clean_RunWithNullFiles_ThrowsException() {
