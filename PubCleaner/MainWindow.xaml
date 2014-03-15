@@ -4,11 +4,14 @@
         Title="PubCleaner" Height="350" Width="525">
     <Grid>
         <DockPanel LastChildFill="True" Margin="5 5">
-            <Button x:Name="CleanNowButton" DockPanel.Dock="top" Command="{BindTo CleanNow()}" 
+            <DockPanel  DockPanel.Dock="Top"  LastChildFill="True">
+                <Button  DockPanel.Dock="Left" x:Name="CleanNowButton" Command="{BindTo CleanNow()}" 
                     Padding="20 10" FontSize="20" HorizontalAlignment="Left"
                     Background="MediumSeaGreen" FontWeight="bold">
-                Clean Now
-            </Button>
+                    Clean Now
+                </Button>
+                <TextBlock TextWrapping="Wrap" Margin="10 0 0 0 ">Deletes all periodicals except the most recent one of each publication.</TextBlock>
+            </DockPanel> 
             <ScrollViewer Margin="0 5 0 0">
                 <TextBlock x:Name="ResultsTextBlock" Text="{BindTo CleanResults}" />
             </ScrollViewer>

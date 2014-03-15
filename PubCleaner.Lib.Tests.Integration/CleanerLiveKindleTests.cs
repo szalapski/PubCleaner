@@ -9,7 +9,7 @@ namespace PubCleaner.Lib.Tests.Integration {
 
         [TestMethod]
         public void Clean_AgainstLiveKindle_FakeDeleteAndReport() {
-            MultiCleaner sut = new MultiCleaner(new KindleDetector()) { FakeIt = true };
+            MultiCleaner sut = new MultiCleaner(new KindleDetector()) { Pretend = true };
             sut.Clean();
         }
 

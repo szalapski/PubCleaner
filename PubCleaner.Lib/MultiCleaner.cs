@@ -9,13 +9,12 @@ namespace Szalapski.PubCleaner.Lib {
         }
         private IPeriodicalDirectoryDetector directoryDetector;
        
-        public bool FakeIt { get { return fakeIt; } set { fakeIt = value; } } 
-        private bool fakeIt = false;
+        public bool Pretend { get { return pretend; } set { pretend = value; } } 
+        private bool pretend = false;
 
         public CleanResults Clean() {
             IEnumerable<DirectoryInfo> directories = directoryDetector.Detect();
-
-            IEnumerable<IPeriodicalStore> stores = PeriodicalStoreFactory.MakeStores(directories, FakeIt);  // hard dependency
+            IEnumerable<IPeriodicalStore> stores = PeriodicalStoreFactory.MakeStores(directories, Pretend);  // hard dependency
             StringBuilder resultsBuilder = new StringBuilder();
             var results = new CleanResults(true);
             foreach (IPeriodicalStore store in stores) {

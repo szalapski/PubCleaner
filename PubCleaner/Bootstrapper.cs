@@ -5,7 +5,7 @@ using Szalapski.PubCleaner.Lib;
 namespace Szalapski.PubCleaner.App {
     internal static class Bootstrapper {
         internal static MainWindowViewModel GetMainWindowViewModel() {
-            return new MainWindowViewModel(new MultiCleaner(new KindleDetector()) {FakeIt=true});
+            return new MainWindowViewModel(new MultiCleaner(new KindleDetector()) {Pretend=false});
         }
     }
 }
