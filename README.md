@@ -12,4 +12,4 @@ Attach your Kindle via USB. start the app, then click Clean Now.  The app will t
 
 Using semantic versioning.  See http://semver.org for more info.
 
-0.2.0 - first public release; only one feature: deletes periodicals from each publication.  Windows app only.
+0.2.0 - first public release; only one feature: deletes all but the most recent issues from each publication.  Windows app only.
