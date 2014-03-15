@@ -3,9 +3,9 @@ using System.IO;
 using System.Linq;
 
 namespace Szalapski.PubCleaner.Lib {
-    public class KindleDetector : IKindleDetector {
+    public class KindleDetector : IPeriodicalDirectoryDetector {
 
-        public IEnumerable<DirectoryInfo> DetectKindleDirectories() {
+        public IEnumerable<DirectoryInfo> Detect() {
             var files = Directory.GetLogicalDrives();
             string[] driveBlacklist = { @"A:\", @"B:\", @"C:\" };
             IEnumerable<DriveInfo> drives = DriveInfo.GetDrives().Where(d => !driveBlacklist.Contains(d.Name));

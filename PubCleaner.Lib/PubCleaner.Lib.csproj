@@ -40,10 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MultiCleaner.cs" />
+    <Compile Include="PeriodicalStoreFactory.cs" />
     <Compile Include="SingleCleaner.cs" />
     <Compile Include="CleanResults.cs" />
     <Compile Include="ICleaner.cs" />
-    <Compile Include="IKindleDetector.cs" />
+    <Compile Include="IPeriodicalDirectoryDetector.cs" />
     <Compile Include="IPeriodicalStore.cs" />
     <Compile Include="KindleDetector.cs" />
     <Compile Include="KindlePeriodicalStore.cs" />

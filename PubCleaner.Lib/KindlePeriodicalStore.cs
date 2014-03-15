@@ -20,6 +20,7 @@ namespace Szalapski.PubCleaner.Lib {
         private bool deleteEnabled;
 
         public IEnumerable<FileInfo> GetPeriodicals() {
+            if (!root.Exists) return new FileInfo[0];
             return root.EnumerateFiles("*.pobi", SearchOption.AllDirectories);
         }
 
