@@ -3,9 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="PubCleaner" Height="350" Width="525">
     <Grid>
-        <DockPanel LastChildFill="True">
-            <Button x:Name="CleanNowButton" DockPanel.Dock="top" Command="{BindTo CleanNow()}">Clean now</Button>
-            <ScrollViewer>
+        <DockPanel LastChildFill="True" Margin="5 5">
+            <Button x:Name="CleanNowButton" DockPanel.Dock="top" Command="{BindTo CleanNow()}" 
+                    Padding="20 10" FontSize="20" HorizontalAlignment="Left"
+                    Background="MediumSeaGreen" FontWeight="bold">
+                Clean Now
+            </Button>
+            <ScrollViewer Margin="0 5 0 0">
                 <TextBlock x:Name="ResultsTextBlock" Text="{BindTo CleanResults}" />
             </ScrollViewer>
         </DockPanel>
