@@ -5,16 +5,12 @@ using System.Linq;
 
 namespace Szalapski.PubCleaner.Lib {
     public class SingleCleaner : ICleaner {
-        private IPeriodicalStore kindle;
-        
-        public SingleCleaner(IPeriodicalStore kindle) {
-            this.kindle = kindle;
-        }
 
         /// <summary>
         /// Cleans all old periodcials/publications from the attached Kindle, leaving only the most recent one
         /// </summary>
-        public CleanResults Clean() {
+        public CleanResults Clean(DirectoryInfo directory) {
+            var kindle = new KindlePeriodicalStore(directory);
             IEnumerable<FileInfo> periodicals = kindle.GetPeriodicals();
             IEnumerable<FileInfo> oldOnes = FilterToOldPeriodicals(periodicals);
             kindle.Delete(oldOnes);
@@ -23,7 +19,7 @@ namespace Szalapski.PubCleaner.Lib {
             return result;
         }
 
-        private IEnumerable<FileInfo> FilterToOldPeriodicals(IEnumerable<FileInfo> periodicals) {
+        private static IEnumerable<FileInfo> FilterToOldPeriodicals(IEnumerable<FileInfo> periodicals) {
             if (periodicals == null) throw new ArgumentNullException("periodicals");
             List<FileInfo> results = new List<FileInfo>();
             List<FileInfo> latestPeriodicals = new List<FileInfo>();
