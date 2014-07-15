@@ -14,6 +14,7 @@ namespace Szalapski.PubCleaner.Lib.Tests.Unit {
             var mockKindle = new Mock<IPeriodicalStore>();
             var sut = new SingleCleaner(mockKindle.Object);
             var result = sut.Clean();
+            // wilson demo
         }
 
         [TestMethod]
