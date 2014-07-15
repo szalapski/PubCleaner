@@ -12,6 +12,8 @@ namespace Szalapski.PubCleaner {
             this.DataContext = vm;
             InitializeComponent();
         }
+
         private IMainWindowViewModel vm;
+
     }
 }

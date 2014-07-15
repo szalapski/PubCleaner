@@ -9,13 +9,8 @@ namespace PubCleaner.Lib.Tests.Integration {
 
         [TestMethod]
         public void Clean_AgainstLiveKindle_FakeDeleteAndReport() {
-            foreach (DirectoryInfo kindleDirectory in new KindleDetector().DetectKindleDirectories()) {
-                Console.WriteLine("Detected kindle dir {0}", kindleDirectory.FullName);
-                IPeriodicalStore store = new KindlePeriodicalStore(kindleDirectory, pretendDelete: true);
-                SingleCleaner sut = new SingleCleaner(store);
-                sut.Clean();
-            }
-            Assert.Inconclusive();
+            MultiCleaner sut = new MultiCleaner(new KindleDetector()) { Pretend = true };
+            sut.Clean();
         }
 
     }
